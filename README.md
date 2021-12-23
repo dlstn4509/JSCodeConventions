@@ -351,7 +351,7 @@ const getUser = async (userId) => {
 
 axios.get('URL주소').then(onSuccess).catch(onError);
 function onSuccess(result) {
-  getUser(userId);
+  getUser(result);
 }
 function onError(error) {
   console.log(error);
