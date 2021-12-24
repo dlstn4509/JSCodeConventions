@@ -359,3 +359,6 @@ function onError(error) {
   console.log(error);
 }
 ```
+
+## 쿠키, 세션
+- 기능 확인 후에...
