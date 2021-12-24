@@ -353,7 +353,7 @@ const getUser = async (userId) => {
 
 axios.get('URL주소').then(onSuccess).catch(onError);
 function onSuccess(result) {
-  getUser(result);
+  getUser(result.userId);
 }
 function onError(error) {
   console.log(error);
