@@ -10,8 +10,6 @@
 
   [npm trends](https://www.npmtrends.com/)
 
-  [axios](https://www.npmjs.com/package/axios)
-
   [js 표준안 참고 사이트 1](https://ui.toast.com/fe-guide/ko_CODING-CONVENTION)
 
   [js 표준안 참고 사이트 2](https://standardjs.com/rules-kokr.html)
@@ -244,12 +242,15 @@ const workTogether = new Function(); // 함수 생성자 X
 ```
 
 - 파라미터가 하나면 괄호는 생략 가능하다.
+- 화살표 함수고 { } return 이 있으면 { }와 return은 생략 가능하다.
 ```js
 let arr = [1, 2, 3];
 
-let result = arr.filter(v => {
+let result = arr.filter((v) => {
   return v >= 2;
 });
+
+let result = arr.filter(v => v >= 2;);
 ```
 
 ## 블록
@@ -276,7 +277,7 @@ const text = '123'
 console.log(num == text) // X
 console.log(num === text) // O
 
-if(num === text) {
+if (num === text) {
   ...
 }
 ```
@@ -334,6 +335,7 @@ const num; // 한 줄 주석 앞에 공백 추가
 - 통신은 axios, 처리는 async, await 를 사용한다.
 - async, await 사용시 try, catch 로 에러를 관리한다.
 
+  [axios](https://www.npmjs.com/package/axios)
 ```js
 const getUser = async (userId) => {
   try {
